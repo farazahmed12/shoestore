@@ -17,9 +17,9 @@ const ProductIndex = () => {
     },
   };
   return (
-    <div>
-      {Object.entries(shoes).map(([productID, { name, img }]) => (
-        <div className="card" style={{ width: "18rem" }}>
+    <div className="row">
+      {Object.entries(shoes).map(([productID, { name, img }], ind) => (
+        <div key={ind} className="card mx-2" style={{ width: "18rem" }}>
           <Link to={productID}>
             <img src={img} className="card-img-top" alt={name} />
             <div className="card-body">
